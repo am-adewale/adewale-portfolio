@@ -4,6 +4,7 @@ import { Button } from '../components/Button'
 import { ContactSection } from '../components/ContactSection'
 import { PageTransition, Reveal } from '../components/PageTransition'
 import { Skills } from '../components/Skills'
+import { TechStack } from '../components/TechStack'
 import { cvFileName, cvPath, profile } from '../data/profile'
 import { experience, skillGroups } from '../data/experience'
 import { projects } from '../data/projects'
@@ -59,10 +60,27 @@ export function CV() {
       </Reveal>
 
       <Reveal>
+        <section className="cv-section" aria-labelledby="cv-projects">
+          <h2 id="cv-projects">Selected Projects</h2>
+          <div className="tag-row">
+            {projects.map((project) => (
+              <Link className="tag" key={project.slug} to={`/works/${project.slug}`}>
+                {project.id} {project.title}
+              </Link>
+            ))}
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
         <section className="cv-section" aria-labelledby="cv-skills">
           <h2 id="cv-skills">Technical Skills</h2>
           <Skills groups={skillGroups} />
         </section>
+      </Reveal>
+
+      <Reveal>
+        <TechStack />
       </Reveal>
 
       <Reveal>
@@ -108,19 +126,6 @@ export function CV() {
             <strong>{credential.title}</strong>
             <p className="secondary">{credential.org}</p>
           </article>
-        </section>
-      </Reveal>
-
-      <Reveal>
-        <section className="cv-section" aria-labelledby="cv-projects">
-          <h2 id="cv-projects">Selected Projects</h2>
-          <div className="tag-row">
-            {projects.map((project) => (
-              <Link className="tag" key={project.slug} to={`/works/${project.slug}`}>
-                {project.id} {project.title}
-              </Link>
-            ))}
-          </div>
         </section>
       </Reveal>
 

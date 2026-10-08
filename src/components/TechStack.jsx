@@ -1,5 +1,6 @@
 import { techStackRows } from '../data/techStack'
 import { SectionHeading } from './SectionHeading'
+import { ToolTag } from './ToolTag'
 
 function MarqueeRow({ items, direction = 'left', duration = '36s' }) {
   return (
@@ -8,14 +9,14 @@ function MarqueeRow({ items, direction = 'left', duration = '36s' }) {
         <ul className="marquee__group">
           {items.map((item) => (
             <li key={item}>
-              <span className="tag">{item}</span>
+              <ToolTag label={item} />
             </li>
           ))}
         </ul>
         <ul className="marquee__group" aria-hidden="true">
           {items.map((item) => (
             <li key={`${item}-copy`}>
-              <span className="tag">{item}</span>
+              <ToolTag label={item} />
             </li>
           ))}
         </ul>

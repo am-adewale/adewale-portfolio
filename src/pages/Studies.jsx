@@ -2,6 +2,7 @@ import { ContactSection } from '../components/ContactSection'
 import { PageTransition, Reveal } from '../components/PageTransition'
 import { SectionHeading } from '../components/SectionHeading'
 import { Skills } from '../components/Skills'
+import { TechStack } from '../components/TechStack'
 import { Timeline } from '../components/Timeline'
 import {
   certifications,
@@ -37,6 +38,15 @@ export function Studies() {
       </Reveal>
 
       <Reveal>
+        <article className="credential">
+          <span className="eyebrow">{credential.year}</span>
+          <strong>{credential.title}</strong>
+          <p className="secondary">{credential.org}</p>
+          <p>{credential.note}</p>
+        </article>
+      </Reveal>
+
+      <Reveal>
         <section className="studies-certs" aria-labelledby="certs-heading">
           <SectionHeading
             id="certs-heading"
@@ -57,19 +67,10 @@ export function Studies() {
       </Reveal>
 
       <Reveal>
-        <article className="credential">
-          <span className="eyebrow">{credential.year}</span>
-          <strong>{credential.title}</strong>
-          <p className="secondary">{credential.org}</p>
-          <p>{credential.note}</p>
-        </article>
-      </Reveal>
-
-      <Reveal>
         <section>
           <SectionHeading
             title="Practice timeline"
-            description="A short record of how the work has been trained from college through professional licence."
+            description="A short record of how the work has been trained, from college through professional licence."
           />
           <Timeline items={learningTimeline} />
         </section>
@@ -83,6 +84,10 @@ export function Studies() {
           />
           <Skills groups={developmentAreas} />
         </section>
+      </Reveal>
+
+      <Reveal>
+        <TechStack />
       </Reveal>
       <ContactSection />
     </PageTransition>

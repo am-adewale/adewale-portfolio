@@ -3,6 +3,7 @@ import { ArrowUpRight } from 'lucide-react'
 import { GithubIcon } from './BrandIcons'
 import { Link } from 'react-router-dom'
 import { Button } from './Button'
+import { ToolTag } from './ToolTag'
 
 export function ProjectCard({ project, index }) {
   const reduce = useReducedMotion()
@@ -38,9 +39,7 @@ export function ProjectCard({ project, index }) {
         <p>{project.description}</p>
         <div className="tag-row">
           {project.technologies.map((tech) => (
-            <span className="tag" key={tech}>
-              {tech}
-            </span>
+            <ToolTag key={tech} label={tech} />
           ))}
         </div>
         <div className="project-card__links">

@@ -1,3 +1,5 @@
+import { ToolTag } from './ToolTag'
+
 export function Skills({ groups }) {
   return (
     <div className="skill-groups">
@@ -6,9 +8,7 @@ export function Skills({ groups }) {
           <h3 id={`skill-${group.title}`}>{group.title}</h3>
           <div className="tag-row">
             {group.items.map((item) => (
-              <span className="tag" key={item}>
-                {item}
-              </span>
+              <ToolTag key={item} label={item} />
             ))}
           </div>
         </section>

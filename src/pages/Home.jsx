@@ -21,9 +21,6 @@ export function Home() {
           </div>
         </section>
       </Reveal>
-      <Reveal>
-        <TechStack />
-      </Reveal>
       <section aria-labelledby="about-heading">
         <SectionHeading
           id="about-heading"
@@ -42,6 +39,9 @@ export function Home() {
           ))}
         </div>
       </section>
+      <Reveal>
+        <TechStack />
+      </Reveal>
       <ContactSection />
     </PageTransition>
   )

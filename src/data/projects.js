@@ -24,7 +24,7 @@ export const projects = [
     problem:
       'Most movie browsers either feel dense or hide ratings behind extra steps. Users needed a fast way to find a title, understand reception, and leave their own score on any device.',
     solution:
-      'I built a responsive frontend that talks directly to the TMDB REST API, with custom components for search, filters, and ratings. Motion is used only where it helps orientation — list reveals, image hover, and modal detail.',
+      'I built a responsive frontend that talks directly to the TMDB REST API, with custom components for search, filters, and ratings. Motion is used only where it helps orientation list reveals, image hover, and modal detail.',
     features: [
       'Live search against TMDB with clear empty and loading states',
       'Filterable results for quicker browsing',

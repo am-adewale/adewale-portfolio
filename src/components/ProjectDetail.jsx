@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowUpRight } from 'lucide-react'
 import { GithubIcon } from './BrandIcons'
 import { Button } from './Button'
 import { PageTransition } from './PageTransition'
+import { ToolTag } from './ToolTag'
 
 export function ProjectDetail({ project }) {
   return (
@@ -47,9 +48,7 @@ export function ProjectDetail({ project }) {
             <h2>Technologies</h2>
             <div className="tag-row">
               {project.technologies.map((tech) => (
-                <span className="tag" key={tech}>
-                  {tech}
-                </span>
+                <ToolTag key={tech} label={tech} />
               ))}
             </div>
             {project.aiService ? <p className="empty-note" style={{ marginTop: '0.85rem' }}>{project.aiService}</p> : null}
@@ -81,7 +80,7 @@ export function ProjectDetail({ project }) {
             ))}
           </ul>
         </section>
-        <p className="empty-note">Live and GitHub links will be connected when the public URLs are ready.</p>
+        <p className="empty-note">Some Projects Live and GitHub links will be connected as soon as the public URLs are ready.</p>
       </article>
     </PageTransition>
   )

@@ -1,8 +1,10 @@
 import { useParams } from 'react-router-dom'
+import { ContactSection } from '../components/ContactSection'
 import { ProjectCard } from '../components/ProjectCard'
 import { ProjectDetail } from '../components/ProjectDetail'
 import { PageTransition } from '../components/PageTransition'
 import { SectionHeading } from '../components/SectionHeading'
+import { TechStack } from '../components/TechStack'
 import { getProjectBySlug, projects } from '../data/projects'
 
 export function Works() {
@@ -26,13 +28,15 @@ export function Works() {
       <SectionHeading
         eyebrow="Works"
         title="Selected product work."
-        description="Large previews, not a grid of tiny cards. Each piece is a product surface storefront, marketplace, operations, or interface."
+        description="Large previews, not a grid of tiny cards. Each piece is a product surface — storefront, marketplace, operations, or interface."
       />
       <div className="project-list">
         {projects.map((item, index) => (
           <ProjectCard key={item.slug} project={item} index={index} />
         ))}
       </div>
+      <TechStack />
+      <ContactSection />
     </PageTransition>
   )
 }

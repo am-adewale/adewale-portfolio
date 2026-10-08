@@ -228,6 +228,7 @@
 .tag {
   display: inline-flex;
   align-items: center;
+  gap: 0.4rem;
   padding: 0.28rem 0.65rem;
   border: 1px solid var(--border);
   border-radius: var(--radius-pill);
@@ -236,6 +237,13 @@
   background: var(--card);
   text-decoration: none;
   transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.tag__icon {
+  flex: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: var(--accent);
 }
 
 a.tag:hover {

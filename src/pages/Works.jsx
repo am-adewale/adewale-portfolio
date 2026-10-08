@@ -28,7 +28,7 @@ export function Works() {
       <SectionHeading
         eyebrow="Works"
         title="Selected product work."
-        description="Large previews, not a grid of tiny cards. Each piece is a product surface — storefront, marketplace, operations, or interface."
+        description="Large previews, not a grid of tiny cards. Each piece is a product surface storefront, marketplace, operations, or interface."
       />
       <div className="project-list">
         {projects.map((item, index) => (

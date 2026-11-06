@@ -47,8 +47,8 @@ export const projects = [
     description:
       'A full-stack online food store with a product catalogue, shopping cart, secure checkout, and user authentication. I designed the MySQL database for inventory, orders, and user sessions, and improved page performance by 15% on Lighthouse through lazy loading, minification, and asset optimisation.',
     technologies: ['PHP', 'JavaScript', 'MySQL', 'HTML5', 'CSS3'],
-    liveUrl: '#',
-    githubUrl: '#',
+    liveUrl: 'https://oyes-delight.vercel.app/',
+    githubUrl: 'https://github.com/am-adewale/Oyes-delight',
     image: foodEcommerce,
     alt: 'Placeholder preview for the Food E-Commerce Platform',
     overview:
